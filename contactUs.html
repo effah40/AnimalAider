@@ -5,30 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <style>
+    /* Base styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Georgia', serif; /* Replace with custom font if needed */
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background-color: #FAF3E0; /* Light beige background */
+      color: #333; /* Dark text */
     }
+
+    h1, h2 {
+      font-family: 'Georgia', serif;
+      color: #14213D; /* Deep blue */
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #5A5A5A; /* Neutral gray */
+    }
+
     .container {
       text-align: center;
-      margin-top: 50px;
+      margin: 50px auto;
     }
-    .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      z-index: 10;
-      border-radius: 8px;
+
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      color: white;
+      background-color: #14213D; /* Deep blue */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
     }
+
+    button:hover {
+      background-color: #FCA311; /* Accent orange */
+    }
+
+    /* Popup styles */
     .popup-overlay {
       display: none;
       position: fixed;
@@ -39,31 +55,52 @@
       background: rgba(0, 0, 0, 0.6);
       z-index: 5;
     }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #FFFFFF; /* White background */
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      z-index: 10;
+      width: 80%;
+      max-width: 400px;
+    }
+
     .popup input,
     .popup textarea {
       width: 100%;
-      margin-bottom: 10px;
       padding: 10px;
-      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border: 1px solid #D4D4D4; /* Light gray border */
       border-radius: 5px;
+      font-size: 1rem;
+      font-family: 'Georgia', serif;
     }
+
     .popup button {
       padding: 10px 20px;
-      background-color: #28a745;
+      background-color: #14213D; /* Deep blue */
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-family: 'Georgia', serif;
     }
+
     .popup button:hover {
-      background-color: #218838;
+      background-color: #FCA311; /* Accent orange */
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Contact Us</h1>
-    <p>If you have any questions or concerns, feel free to reach out to us!</p>
+    <p>We'd love to hear from you! Reach out to us with any questions or feedback.</p>
     <button id="openPopup">Send a Message</button>
   </div>
 
